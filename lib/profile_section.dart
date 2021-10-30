@@ -32,20 +32,22 @@ class ProfileSection extends StatelessWidget {
                   Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        Container(
-                            alignment: Alignment.topLeft,
-                            padding: const EdgeInsets.all(4.0),
-                            child: Text("Olá, Yure Pablo",
-                                style: greetingTextStyle,
-                                textAlign: TextAlign.left)),
-                        Container(
+                        Flexible(
+                            child: Container(
+                              alignment: Alignment.topLeft,
+                              padding: const EdgeInsets.all(4.0),
+                              child: Text("Olá, Yure Pablo",
+                                  style: greetingTextStyle,
+                                  textAlign: TextAlign.left))),
+                        Flexible(
+                          child: Container(
                             alignment: Alignment.topRight,
                             padding: const EdgeInsets.all(4.0),
                             child: Text("Nível 1",
                                 style: levelTextStyle,
-                                textAlign: TextAlign.right)),
+                                textAlign: TextAlign.right))),
                       ]),
-                  PointsSection(),
+                  Flexible(child: PointsSection(112, 400)),
                 ]),
               ],
             )),
