@@ -13,12 +13,12 @@ class ProfileSection extends StatelessWidget {
         title: Text('Acompanhamentos'),
       ),
       body: Container(
-        height: 500.0,
+        height: 130.0,
         width: double.infinity,
         color: Colors.white,
         padding: const EdgeInsets.all(16.0),
         child: Container(
-            padding: const EdgeInsets.all(16.0),
+            padding: const EdgeInsets.all(8.0),
             decoration: ShapeDecoration(
               color: Colors.white,
               shape: RoundedRectangleBorder(
@@ -28,27 +28,27 @@ class ProfileSection extends StatelessWidget {
             child: Row(
               children: [
                 ProfileImage("", "Yure Pablo"),
-                Column(children: [
-                  Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Flexible(
-                            child: Container(
-                              alignment: Alignment.topLeft,
-                              padding: const EdgeInsets.all(4.0),
-                              child: Text("Olá, Yure Pablo",
-                                  style: greetingTextStyle,
-                                  textAlign: TextAlign.left))),
-                        Flexible(
-                          child: Container(
-                            alignment: Alignment.topRight,
-                            padding: const EdgeInsets.all(4.0),
-                            child: Text("Nível 1",
-                                style: levelTextStyle,
-                                textAlign: TextAlign.right))),
-                      ]),
-                  Flexible(child: PointsSection(112, 400)),
-                ]),
+                Expanded(
+                  child:Padding(
+                    padding: EdgeInsets.only(left: 4.0),
+                    child:Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                    Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: [
+                          Text("Olá, Yure Pablo",
+                                  style: greetingTextStyle),
+                          Text("Nível 1",
+                                  style: levelTextStyle),
+                        ]),
+                    Padding(
+                      padding:EdgeInsets.only(top: 8.0),
+                      child:PointsSection(112, 400),
+                    ),  
+                ]))),
               ],
             )),
       ),

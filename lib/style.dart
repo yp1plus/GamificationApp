@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
 
-const largeTextSize = 26.0;
-const mediumTextSize = 20.0;
-const bodyTextSize = 16.0;
-const smallTextSize = 12.0;
+const largeTextSize = 18.0;
+const mediumTextSize = 14.0;
+const smallTextSize = 8.0;
 
 const imageTextStyle = TextStyle(
   fontWeight: FontWeight.bold,
@@ -13,13 +12,13 @@ const imageTextStyle = TextStyle(
 
 const greetingTextStyle = TextStyle(
   fontWeight: FontWeight.normal,
-  fontSize: bodyTextSize,
+  fontSize: mediumTextSize,
   color: Colors.grey,
 );
 
 const levelTextStyle = TextStyle(
   fontWeight: FontWeight.normal,
-  fontSize: bodyTextSize,
+  fontSize: smallTextSize,
   color: Colors.blue,
 );
 
